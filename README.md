@@ -7,7 +7,7 @@
 
 В endpoint POST /api/routes?format=csv загружается csv файл с точками маршрута: пример файла:
 
-[example.csv](https://prod-files-secure.s3.us-west-2.amazonaws.com/56b261ac-032c-4a60-9a87-b00f64f920b2/bf3bdbfa-3a09-425a-b881-3006c5d84b14/example.csv)
+[example.csv](https://drive.google.com/file/d/1L1xoLdFR_h7eOsBoVDewp2SnoSVyWeAX/view?usp=sharing)
 
 Первая точка в массиве является стартом маршрута.
 
