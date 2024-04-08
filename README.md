@@ -13,8 +13,6 @@
 
 Из переданных точек составляется оптимальный маршрут и возвращается в следующем виде:
 
-[Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/56b261ac-032c-4a60-9a87-b00f64f920b2/e6477720-a387-4bff-86cf-08cfa77763d1/Untitled.png)
+[Untitled](https://imgur.com/a/RkZTN5P)
 
-В endpoint-е GET /api/routes/{id} запрашивается раннее созданный оптимальный маршрут, должен возвращаться ответ в следующем виде:
-
-[Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/56b261ac-032c-4a60-9a87-b00f64f920b2/0b7feef4-039e-4db7-9109-ee09fdef8935/Untitled.png)
+В endpoint-е GET /api/routes/{id} запрашивается раннее созданный оптимальный маршрут, виде ответа как в endpoint-е POST /api/routes?format=csv
