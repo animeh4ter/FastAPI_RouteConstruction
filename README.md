@@ -15,4 +15,4 @@
 
 [Untitled](https://imgur.com/a/RkZTN5P)
 
-В endpoint-е GET /api/routes/{id} запрашивается раннее созданный оптимальный маршрут, виде ответа как в endpoint-е POST /api/routes?format=csv
+В endpoint-е GET /api/routes/{id} запрашивается раннее созданный оптимальный маршрут, виде ответа как в endpoint-е POST /api/routes?format=csv (картинка выше)
