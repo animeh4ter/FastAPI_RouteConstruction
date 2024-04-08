@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text
 from sqlalchemy.ext.declarative import declarative_base
+from python_tsp.distances import great_circle_distance_matrix
 
 import numpy as np
 from scipy.spatial import distance
@@ -30,5 +31,15 @@ class CsvFile(Base):
         return float_data
 
     def route_construction(self):
-        """Нужен алгоритм Литтла?"""
-        pass
+        """
+        https://pypi.org/project/python_tsp/
+        solve_tsp_simulated_annealing работает быстрее, НО менее точно
+        для большого списка явно быстрее
+        """
+        sources = np.array(self.get_content())
+        # перегоняем в матрицу расстояний
+        distance_matrix = great_circle_distance_matrix(sources)
+        #
+        permutation, _ = solve_tsp_simulated_annealing(distance_matrix)
+
+        return permutation
