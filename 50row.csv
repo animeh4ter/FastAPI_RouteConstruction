@@ -1,0 +1,50 @@
+zip,lat,lng,city,state_id,state_name,zcta,parent_zcta,population,density,county_fips,county_name,county_weights,county_names_all,county_fips_all,imprecise,military,timezone
+601,18.18027,-66.75266,Adjuntas,PR,Puerto Rico,TRUE,,17126,102.6,72001,Adjuntas,"{""72001"": 98.73, ""72141"": 1.27}",Adjuntas|Utuado,72001|72141,FALSE,FALSE,America/Puerto_Rico
+602,18.36075,-67.17541,Aguada,PR,Puerto Rico,TRUE,,37895,482.5,72003,Aguada,"{""72003"": 100}",Aguada,72003,FALSE,FALSE,America/Puerto_Rico
+603,18.45744,-67.12225,Aguadilla,PR,Puerto Rico,TRUE,,49136,552.4,72005,Aguadilla,"{""72005"": 99.76, ""72099"": 0.24}",Aguadilla|Moca,72005|72099,FALSE,FALSE,America/Puerto_Rico
+606,18.16585,-66.93716,Maricao,PR,Puerto Rico,TRUE,,5751,50.1,72093,Maricao,"{""72093"": 82.26, ""72153"": 11.68, ""72121"": 6.06}",Maricao|Yauco|Sabana Grande,72093|72153|72121,FALSE,FALSE,America/Puerto_Rico
+610,18.2911,-67.12243,Anasco,PR,Puerto Rico,TRUE,,26153,272.1,72011,Añasco,"{""72011"": 96.71, ""72099"": 2.81, ""72083"": 0.37, ""72003"": 0.11}",Añasco|Moca|Las Marías|Aguada,72011|72099|72083|72003,FALSE,FALSE,America/Puerto_Rico
+611,18.27698,-66.80688,Angeles,PR,Puerto Rico,TRUE,,1283,46.5,72141,Utuado,"{""72141"": 100}",Utuado,72141,FALSE,FALSE,America/Puerto_Rico
+612,18.41283,-66.7051,Arecibo,PR,Puerto Rico,TRUE,,64090,325,72013,Arecibo,"{""72013"": 98.86, ""72065"": 0.94, ""72017"": 0.2}",Arecibo|Hatillo|Barceloneta,72013|72065|72017,FALSE,FALSE,America/Puerto_Rico
+616,18.41878,-66.6679,Bajadero,PR,Puerto Rico,TRUE,,10186,361.3,72013,Arecibo,"{""72013"": 100}",Arecibo,72013,FALSE,FALSE,America/Puerto_Rico
+617,18.44598,-66.56006,Barceloneta,PR,Puerto Rico,TRUE,,22803,479.7,72017,Barceloneta,"{""72017"": 99.63, ""72054"": 0.37}",Barceloneta|Florida,72017|72054,FALSE,FALSE,America/Puerto_Rico
+622,17.98892,-67.1566,Boqueron,PR,Puerto Rico,TRUE,,7751,96,72023,Cabo Rojo,"{""72023"": 100}",Cabo Rojo,72023,FALSE,FALSE,America/Puerto_Rico
+623,18.08429,-67.15336,Cabo Rojo,PR,Puerto Rico,TRUE,,39652,390.6,72023,Cabo Rojo,"{""72023"": 100}",Cabo Rojo,72023,FALSE,FALSE,America/Puerto_Rico
+624,18.05905,-66.71932,Penuelas,PR,Puerto Rico,TRUE,,21912,180.2,72111,Peñuelas,"{""72111"": 94.96, ""72113"": 5.04}",Peñuelas|Ponce,72111|72113,FALSE,FALSE,America/Puerto_Rico
+627,18.41905,-66.86037,Camuy,PR,Puerto Rico,TRUE,,32885,273.8,72027,Camuy,"{""72027"": 100}",Camuy,72027,FALSE,FALSE,America/Puerto_Rico
+631,18.1852,-66.83169,Castaner,PR,Puerto Rico,TRUE,,1098,135.6,72081,Lares,"{""72081"": 50.58, ""72001"": 49.42}",Lares|Adjuntas,72081|72001,FALSE,FALSE,America/Puerto_Rico
+636,18.16354,-67.08014,Rosario,PR,Puerto Rico,TRUE,,1174,1236,72125,San Germán,"{""72125"": 100}",San Germán,72125,FALSE,FALSE,America/Puerto_Rico
+637,18.081,-66.94659,Sabana Grande,PR,Puerto Rico,TRUE,,23016,252.7,72121,Sabana Grande,"{""72121"": 94.01, ""72125"": 4.2, ""72079"": 1.79}",Sabana Grande|San Germán|Lajas,72121|72125|72079,FALSE,FALSE,America/Puerto_Rico
+638,18.28462,-66.5137,Ciales,PR,Puerto Rico,TRUE,,17689,95.7,72039,Ciales,"{""72039"": 91.88, ""72107"": 7.48, ""72091"": 0.64}",Ciales|Orocovis|Manatí,72039|72107|72091,FALSE,FALSE,America/Puerto_Rico
+641,18.26742,-66.70212,Utuado,PR,Puerto Rico,TRUE,,24915,114.4,72141,Utuado,"{""72141"": 100}",Utuado,72141,FALSE,FALSE,America/Puerto_Rico
+646,18.43251,-66.28429,Dorado,PR,Puerto Rico,TRUE,,36142,662.9,72051,Dorado,"{""72051"": 97.19, ""72143"": 2.81}",Dorado|Vega Alta,72051|72143,FALSE,FALSE,America/Puerto_Rico
+647,17.96667,-66.94266,Ensenada,PR,Puerto Rico,TRUE,,5198,126.9,72055,Guánica,"{""72055"": 98.36, ""72079"": 1.64}",Guánica|Lajas,72055|72079,FALSE,FALSE,America/Puerto_Rico
+650,18.34487,-66.58347,Florida,PR,Puerto Rico,TRUE,,14301,174.1,72054,Florida,"{""72054"": 47.43, ""72141"": 41.94, ""72091"": 4.26, ""72039"": 2.9, ""72013"": 2.41, ""72017"": 1.07}",Florida|Utuado|Manatí|Ciales|Arecibo|Barceloneta,72054|72141|72091|72039|72013|72017,FALSE,FALSE,America/Puerto_Rico
+652,18.45614,-66.60194,Garrochales,PR,Puerto Rico,TRUE,,3193,191.4,72013,Arecibo,"{""72013"": 100}",Arecibo,72013,FALSE,FALSE,America/Puerto_Rico
+653,17.99413,-66.90266,Guanica,PR,Puerto Rico,TRUE,,9099,159.1,72055,Guánica,"{""72055"": 97.54, ""72121"": 2.46}",Guánica|Sabana Grande,72055|72121,FALSE,FALSE,America/Puerto_Rico
+656,18.04186,-66.79123,Guayanilla,PR,Puerto Rico,TRUE,,18633,170.7,72059,Guayanilla,"{""72059"": 96.96, ""72153"": 2.88, ""72111"": 0.16}",Guayanilla|Yauco|Peñuelas,72059|72153|72111,FALSE,FALSE,America/Puerto_Rico
+659,18.41036,-66.79691,Hatillo,PR,Puerto Rico,TRUE,,37525,352.9,72065,Hatillo,"{""72065"": 100}",Hatillo,72065,FALSE,FALSE,America/Puerto_Rico
+660,18.13412,-67.11399,Hormigueros,PR,Puerto Rico,TRUE,,15630,533.2,72067,Hormigueros,"{""72067"": 100}",Hormigueros,72067,FALSE,FALSE,America/Puerto_Rico
+662,18.46622,-67.01508,Isabela,PR,Puerto Rico,TRUE,,40503,378.9,72071,Isabela,"{""72071"": 100}",Isabela,72071,FALSE,FALSE,America/Puerto_Rico
+664,18.21064,-66.59066,Jayuya,PR,Puerto Rico,TRUE,,15132,124.5,72073,Jayuya,"{""72073"": 94.97, ""72141"": 5.03}",Jayuya|Utuado,72073|72141,FALSE,FALSE,America/Puerto_Rico
+667,18.01246,-67.0417,Lajas,PR,Puerto Rico,TRUE,,23665,151.8,72079,Lajas,"{""72079"": 98.09, ""72125"": 1.91}",Lajas|San Germán,72079|72125,FALSE,FALSE,America/Puerto_Rico
+669,18.27019,-66.86727,Lares,PR,Puerto Rico,TRUE,,27763,167.2,72081,Lares,"{""72081"": 93.38, ""72141"": 3.8, ""72083"": 2.7, ""72131"": 0.12}",Lares|Utuado|Las Marías|San Sebastián,72081|72141|72083|72131,FALSE,FALSE,America/Puerto_Rico
+670,18.23782,-66.98852,Las Marias,PR,Puerto Rico,TRUE,,8744,72.6,72083,Las Marías,"{""72083"": 95.63, ""72011"": 3.6, ""72097"": 0.45, ""72093"": 0.32}",Las Marías|Añasco|Mayagüez|Maricao,72083|72011|72097|72093,FALSE,FALSE,America/Puerto_Rico
+674,18.42229,-66.4891,Manati,PR,Puerto Rico,TRUE,,39569,351.6,72091,Manatí,"{""72091"": 99.45, ""72145"": 0.55}",Manatí|Vega Baja,72091|72145,FALSE,FALSE,America/Puerto_Rico
+676,18.37897,-67.08098,Moca,PR,Puerto Rico,TRUE,,36849,291.2,72099,Moca,"{""72099"": 99.19, ""72003"": 0.81}",Moca|Aguada,72099|72003,FALSE,FALSE,America/Puerto_Rico
+677,18.33535,-67.23155,Rincon,PR,Puerto Rico,TRUE,,15225,403.5,72117,Rincón,"{""72117"": 98.0, ""72011"": 1.19, ""72003"": 0.81}",Rincón|Añasco|Aguada,72117|72011|72003,FALSE,FALSE,America/Puerto_Rico
+678,18.42949,-66.93016,Quebradillas,PR,Puerto Rico,TRUE,,25763,341.4,72115,Quebradillas,"{""72115"": 77.11, ""72071"": 17.13, ""72131"": 5.76}",Quebradillas|Isabela|San Sebastián,72115|72071|72131,FALSE,FALSE,America/Puerto_Rico
+680,18.16307,-67.36122,Mayaguez,PR,Puerto Rico,TRUE,,43070,258.6,72097,Mayagüez,"{""72097"": 94.13, ""72125"": 3.44, ""72011"": 2.43}",Mayagüez|San Germán|Añasco,72097|72125|72011,FALSE,FALSE,America/Puerto_Rico
+682,18.22415,-67.15309,Mayaguez,PR,Puerto Rico,TRUE,,31816,753.2,72097,Mayagüez,"{""72097"": 99.83, ""72067"": 0.17}",Mayagüez|Hormigueros,72097|72067,FALSE,FALSE,America/Puerto_Rico
+683,18.10926,-67.03803,San German,PR,Puerto Rico,TRUE,,29664,232.4,72125,San Germán,"{""72125"": 100}",San Germán,72125,FALSE,FALSE,America/Puerto_Rico
+685,18.33656,-66.97518,San Sebastian,PR,Puerto Rico,TRUE,,40169,197.1,72131,San Sebastián,"{""72131"": 87.74, ""72071"": 11.31, ""72099"": 0.95}",San Sebastián|Isabela|Moca,72131|72071|72099,FALSE,FALSE,America/Puerto_Rico
+687,18.31707,-66.42029,Morovis,PR,Puerto Rico,TRUE,,29069,288.7,72101,Morovis,"{""72101"": 100}",Morovis,72101,FALSE,FALSE,America/Puerto_Rico
+688,18.3807,-66.62496,Sabana Hoyos,PR,Puerto Rico,TRUE,,11552,137.2,72013,Arecibo,"{""72013"": 100}",Arecibo,72013,FALSE,FALSE,America/Puerto_Rico
+690,18.49363,-67.09734,San Antonio,PR,Puerto Rico,TRUE,,6217,1061.6,72005,Aguadilla,"{""72005"": 100}",Aguadilla,72005,FALSE,FALSE,America/Puerto_Rico
+692,18.40905,-66.33768,Vega Alta,PR,Puerto Rico,TRUE,,33646,489.7,72143,Vega Alta,"{""72143"": 99.87, ""72145"": 0.13}",Vega Alta|Vega Baja,72143|72145,FALSE,FALSE,America/Puerto_Rico
+693,18.42633,-66.39811,Vega Baja,PR,Puerto Rico,TRUE,,56146,488.1,72145,Vega Baja,"{""72145"": 98.28, ""72143"": 1.43, ""72091"": 0.29}",Vega Baja|Vega Alta|Manatí,72145|72143|72091,FALSE,FALSE,America/Puerto_Rico
+694,18.48327,-66.39269,Vega Baja,PR,Puerto Rico,TRUE,,86,41.6,72145,Vega Baja,"{""72145"": 100}",Vega Baja,72145,FALSE,FALSE,America/Puerto_Rico
+698,18.07274,-66.85519,Yauco,PR,Puerto Rico,TRUE,,34016,209.6,72153,Yauco,"{""72153"": 97.82, ""72059"": 2.18}",Yauco|Guayanilla,72153|72059,FALSE,FALSE,America/Puerto_Rico
+703,18.24739,-66.13143,Aguas Buenas,PR,Puerto Rico,TRUE,,25001,311.2,72007,Aguas Buenas,"{""72007"": 93.07, ""72041"": 3.61, ""72045"": 3.32}",Aguas Buenas|Cidra|Comerío,72007|72041|72045,FALSE,FALSE,America/Puerto_Rico
+704,17.97442,-66.22888,Aguirre,PR,Puerto Rico,TRUE,,7179,308.1,72123,Salinas,"{""72123"": 97.64, ""72057"": 2.36}",Salinas|Guayama,72123|72057,FALSE,FALSE,America/Puerto_Rico
+705,18.1294,-66.26653,Aibonito,PR,Puerto Rico,TRUE,,24414,310,72009,Aibonito,"{""72009"": 97.19, ""72043"": 2.81}",Aibonito|Coamo,72009|72043,FALSE,FALSE,America/Puerto_Rico

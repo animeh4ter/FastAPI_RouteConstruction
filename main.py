@@ -2,12 +2,14 @@ from fastapi import FastAPI, File, UploadFile, Depends, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, cast, Integer
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import Session
 
 import csv
+
+import json
 
 from models import CsvFile, Base
 
@@ -53,6 +55,14 @@ async def upload_routes_file(file_format: str, file: UploadFile = File(...),
         contents = await file.read()
         contents = contents.decode("utf-8")
 
+        csv_lines = contents.strip().split('\n')
+        # не > 100 строчек
+        # иначе кол-во маршрутов будет стремиться к бесконечности
+        if len(csv_lines) > 101:
+            raise HTTPException(status_code=400,
+                                detail="CSV file should "
+                                       "have no more than 101 lines")
+
         # Создаем список для хранения данных из столбцов lng и lat
         lng_lat_data = []
 
@@ -70,14 +80,37 @@ async def upload_routes_file(file_format: str, file: UploadFile = File(...),
         # по сути, по тз нужны только точки
         csv_file.set_content(lng_lat_data)
 
-        # Добавляем объект в сессию базы данных и сохраняем изменения
         db.add(csv_file)
         db.commit()
 
-        return {"status": "true"}
+        # сохраняем в бд лучший маршрут
+        best_route = csv_file.get_ans_json()
+        csv_file.best_route = json.dumps(best_route)
+        db.commit()
+
+        return {"status": best_route}
 
     except Exception as e:
         return {"status": "false", "error": f"{e}"}
+
+
+@app.get("/api/routes/{route_id}")
+async def get_optimal_route(route_id: int,
+                            db: Session = Depends(get_db)) -> dict:
+    """Получение оптимального маршрута по его id"""
+
+    # Получаем объект CsvFile из базы данных по его id
+    csv_file = db.query(CsvFile).filter(
+        CsvFile.id == cast(route_id, Integer)).first()
+
+    # Проверяем, найден ли маршрут с указанным ID
+    if not csv_file:
+        raise HTTPException(status_code=404, detail="Route not found")
+
+    # Преобразуем поле best_route из JSON-строки обратно в словарь
+    best_route = json.loads(csv_file.best_route)
+
+    return best_route
 
 
 if __name__ == '__main__':
