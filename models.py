@@ -1,3 +1,5 @@
+from typing import Union
+
 from sqlalchemy import Column, Integer, String, Text
 from sqlalchemy.ext.declarative import declarative_base
 from python_tsp.distances import great_circle_distance_matrix
@@ -20,7 +22,7 @@ class CsvFile(Base):
     content = Column(Text)
     best_route = Column(Text)
 
-    def set_content(self, content):
+    def set_content(self, content:  list[Union[tuple[str, str], list[float]]]):
         """Запись списка координат"""
         self.content = json.dumps(content)
 
@@ -55,13 +57,15 @@ class CsvFile(Base):
         return route_list
 
     def get_ans_json(self):
+        try:
+            best_route = self._route_construction()
+            self.best_route = best_route
 
-        best_route = self._route_construction()
-        self.best_route = best_route
+            json_data = {
+                "id": self.id,
+                "points": best_route
+            }
 
-        json_data = {
-            "id": self.id,
-            "points": best_route
-        }
-
-        return json_data
+            return json_data
+        except Exception as e:
+            return {'error': e}
