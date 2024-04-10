@@ -4,6 +4,13 @@ volumes:
   pg_data:
 
 services:
+  server:
+    build:
+      context: ./server
+    ports:
+      - "8000:8000"
+    networks:
+      - test_network
   db:
     image: postgres:13.10
     env_file: .env
@@ -15,6 +22,8 @@ services:
       POSTGRES_DB: server_coords
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: qwe45asd46
+    networks:
+      - test_network
   db_init:
     image: postgres:13.10
     env_file: .env
@@ -26,6 +35,15 @@ services:
     env_file: .env
     depends_on:
       - db
+    ports:
+      - "8001:8000"
+    networks:
+      - test_network
   frontend:
     env_file: .env
     build: ./client/
+
+
+networks:
+  test_network:
+    driver: bridge

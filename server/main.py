@@ -12,15 +12,20 @@ from typing import Union
 
 import csv
 import json
+import sys
+import os
 
-from server.models import CsvFile, Base
+# что бы не ругалось при сборке докера? что не существует models
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+from models import CsvFile, Base
+
 
 # подруб алхимии
-SQLALCHEMY_DATABASE_URL = \
-    "postgresql://postgres:qwe45asd46@localhost/server_coords"
-# если хотим локально меняем на db:
 # SQLALCHEMY_DATABASE_URL = \
-#     "postgresql://postgres:qwe45asd46@db/server_coords"
+#     "postgresql://postgres:qwe45asd46@localhost/server_coords"
+# если хотим локально меняем на db:
+SQLALCHEMY_DATABASE_URL = \
+    "postgresql://postgres:qwe45asd46@db/server_coords"
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base.metadata.create_all(bind=engine)
@@ -37,7 +42,9 @@ def get_db():
 
 # экземпляр класса FastAPI и статика
 app = FastAPI()
-app.mount("/static", StaticFiles(directory="client/static"), name="static")
+
+# статика для запуска без докера
+# app.mount("/static", StaticFiles(directory="client/static"), name="static")
 
 
 @app.get("/")
