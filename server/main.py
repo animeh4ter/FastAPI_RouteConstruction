@@ -22,6 +22,7 @@ from models import CsvFile, Base
 
 # подруб алхимии
 
+# !для докера!
 # SQLALCHEMY_DATABASE_URL = \
 #     "postgresql://postgres:qwe45asd46@db/server_coords"
 
