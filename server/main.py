@@ -21,11 +21,13 @@ from models import CsvFile, Base
 
 
 # подруб алхимии
+
 # SQLALCHEMY_DATABASE_URL = \
-#     "postgresql://postgres:qwe45asd46@localhost/server_coords"
-# если хотим локально меняем на db:
+#     "postgresql://postgres:qwe45asd46@db/server_coords"
+
+# !если хотим локально меняем на localhost!:
 SQLALCHEMY_DATABASE_URL = \
-    "postgresql://postgres:qwe45asd46@db/server_coords"
+    "postgresql://postgres:qwe45asd46@localhost/server_coords"
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base.metadata.create_all(bind=engine)
