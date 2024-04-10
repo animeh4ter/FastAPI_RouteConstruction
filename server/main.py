@@ -13,10 +13,14 @@ from typing import Union
 import csv
 import json
 
-from models import CsvFile, Base
+from server.models import CsvFile, Base
 
 # подруб алхимии
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:qwe45asd46@localhost/coords"
+SQLALCHEMY_DATABASE_URL = \
+    "postgresql://postgres:qwe45asd46@localhost/server_coords"
+# если хотим локально меняем на db:
+# SQLALCHEMY_DATABASE_URL = \
+#     "postgresql://postgres:qwe45asd46@db/server_coords"
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base.metadata.create_all(bind=engine)
@@ -33,13 +37,13 @@ def get_db():
 
 # экземпляр класса FastAPI и статика
 app = FastAPI()
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="client/static"), name="static")
 
 
 @app.get("/")
 async def get_upload_page() -> FileResponse:
     """Стартовая страничка приложения"""
-    return FileResponse("static/upload.html")
+    return FileResponse("client/static/upload.html")
 
 
 @app.post("/api/routes")
@@ -58,7 +62,7 @@ async def upload_routes_file(file_format: str, file: UploadFile = File(...),
 
         csv_lines = contents.strip().split('\n')
         # не > 100 строчек
-        # иначе кол-во маршрутов будет стремиться к бесконечности
+        # иначе кол-во маршрутов будет стремиться все больше к бесконечности
         if len(csv_lines) > 101:
             raise HTTPException(status_code=400,
                                 detail="CSV file should "

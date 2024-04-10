@@ -16,3 +16,13 @@
 [Untitled](https://imgur.com/a/RkZTN5P)
 
 В endpoint-е GET /api/routes/{id} запрашивается раннее созданный оптимальный маршрут, виде ответа как в endpoint-е POST /api/routes?format=csv (картинка выше)
+
+
+В рамках REST API не хватает:
+
+1) PUT /api/routes/{route_id}: Этот эндпоинт позволит 
+обновить существующий маршрут по его идентификатору. 
+
+2) DELETE /api/routes/{route_id}: Этот эндпоинт позволит удалить существующий маршрут 
+по его идентификатору. 
+
