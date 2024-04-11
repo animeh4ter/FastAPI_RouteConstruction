@@ -1,5 +1,5 @@
 import unittest
-from models import CsvFile
+from server.models import CsvFile
 
 
 class TestCsvFile(unittest.TestCase):
