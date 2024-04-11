@@ -19,16 +19,17 @@ import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from models import CsvFile, Base
 
+main_dir_path = os.path.dirname(os.path.realpath(__file__))
 
 # подруб алхимии
 
 # !для докера!
-# SQLALCHEMY_DATABASE_URL = \
-#     "postgresql://postgres:qwe45asd46@db/server_coords"
+SQLALCHEMY_DATABASE_URL = \
+    "postgresql://postgres:qwe45asd46@db/server_coords"
 
 # !если хотим локально меняем на localhost!:
-SQLALCHEMY_DATABASE_URL = \
-    "postgresql://postgres:qwe45asd46@localhost/server_coords"
+# SQLALCHEMY_DATABASE_URL = \
+#     "postgresql://postgres:qwe45asd46@localhost/server_coords"
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base.metadata.create_all(bind=engine)
@@ -46,14 +47,11 @@ def get_db():
 # экземпляр класса FastAPI и статика
 app = FastAPI()
 
-# статика для запуска без докера
-app.mount("/static", StaticFiles(directory="server/static"), name="static")
-
 
 @app.get("/")
 async def get_upload_page() -> FileResponse:
     """Стартовая страничка приложения"""
-    return FileResponse("server/static/upload.html")
+    return FileResponse(main_dir_path + "/static/upload.html")
 
 
 @app.post("/api/routes")

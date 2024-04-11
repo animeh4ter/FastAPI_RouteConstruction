@@ -1,3 +1,5 @@
+# !запускается на 8001!
+
 version: '3'
 
 volumes:
@@ -14,6 +16,7 @@ services:
   db:
     image: postgres:13.10
     env_file: .env
+    container_name: db
     volumes:
       - pg_data:/var/lib/postgresql/data
     ports:
@@ -27,7 +30,7 @@ services:
   db_init:
     image: postgres:13.10
     env_file: .env
-    command: [ "bash", "-c", "sleep 5 && PGPASSWORD=qwe45asd46 psql -h db -U postgres -w -c 'CREATE DATABASE server_coords;'" ]
+    command: [ "bash", "-c", "sleep 10 && PGPASSWORD=qwe45asd46 psql -h db -U postgres -w -c 'CREATE DATABASE server_coords;'" ]
     depends_on:
       - db
   backend:
