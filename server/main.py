@@ -47,13 +47,13 @@ def get_db():
 app = FastAPI()
 
 # статика для запуска без докера
-# app.mount("/static", StaticFiles(directory="client/static"), name="static")
+app.mount("/static", StaticFiles(directory="server/static"), name="static")
 
 
 @app.get("/")
 async def get_upload_page() -> FileResponse:
     """Стартовая страничка приложения"""
-    return FileResponse("client/static/upload.html")
+    return FileResponse("server/static/upload.html")
 
 
 @app.post("/api/routes")

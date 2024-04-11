@@ -39,9 +39,6 @@ services:
       - "8001:8000"
     networks:
       - test_network
-  frontend:
-    env_file: .env
-    build: ./client/
 
 
 networks:
