@@ -8,6 +8,8 @@ from sqlalchemy.exc import DataError
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import Session
 
+from dotenv import load_dotenv
+
 from typing import Union
 
 import csv
@@ -21,11 +23,13 @@ from models import CsvFile, Base
 
 main_dir_path = os.path.dirname(os.path.realpath(__file__))
 
-# подруб алхимии
+# !не забыть .env!
+load_dotenv()
+db_host = os.getenv("DB_HOST")
 
-# !для докера!
+# подруб алхимии
 SQLALCHEMY_DATABASE_URL = \
-    "postgresql://postgres:qwe45asd46@db/server_coords"
+    f"postgresql://postgres:qwe45asd46@{db_host}/server_coords"
 
 # !если хотим локально меняем на localhost!:
 # SQLALCHEMY_DATABASE_URL = \

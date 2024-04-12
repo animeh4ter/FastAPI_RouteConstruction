@@ -23,7 +23,7 @@
                     <div class="card-header">Upload CSV File</div>
                     <div class="card-body">
 <!--  для докера        <form action="http://127.0.0.1:8001/api/routes?file_format=csv" method="post" enctype="multipart/form-data">-->
-                        <form action="http://127.0.0.1:8001/api/routes?file_format=csv" method="post" enctype="multipart/form-data">
+                        <form action="http://127.0.0.1:8000/api/routes?file_format=csv" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="file">Choose CSV File</label>
                                 <input type="file" class="form-control-file" id="file" name="file" accept=".csv">
@@ -62,7 +62,7 @@
         const routeId = document.getElementById("route_id").value;
         // докер сервер
         // window.location.href = "http://127.0.0.1:8001/api/routes/" + routeId;
-        window.location.href = "http://127.0.0.1:8001/api/routes/" + routeId;
+        window.location.href = "http://127.0.0.1:8000/api/routes/" + routeId;
     });
 </script>
 
